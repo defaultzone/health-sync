@@ -1,0 +1,19 @@
+[package]
+name = "health-sync"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+minhook = "0.5.0"
+
+[dependencies.windows]
+version = "0.52.0"
+features = [
+    "Win32_Foundation",
+    "Win32_System_LibraryLoader",
+    "Win32_System_SystemServices",
+]
+
+[lib]
+name = "plugin"
+crate-type = ["cdylib"]
